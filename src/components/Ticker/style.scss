@@ -1,0 +1,85 @@
+@import "./../../style/variables";
+
+.ticker {
+  color: $main_color;
+  text-shadow: 0 -1px rgb(0 0 0 / 50%);
+  background-color: #22201c;
+  height: 120px;
+  padding: 0 40px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &_text {
+    font-size: 26px;
+    line-height: 31px;
+  }
+  &_logo {
+    font-size: 52px;
+    //padding: 0 60px;
+    font-family: "Philosopher", cursive;
+    letter-spacing: 10px;
+  }
+  span{
+    padding: 0 30px;
+    height: 30px;
+    line-height: 24px;
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .ticker{
+    &_text {
+      text-align: center;
+      font-size: 22px;
+      line-height: 26px;
+    }
+    &_logo {
+      font-size: 40px;
+      padding: 0 30px;
+      letter-spacing: 5px;
+    }
+    span{
+      padding: 0 20px;
+    }
+  }
+}
+@media (max-width: 900px) {
+  .ticker{
+    &_text {
+      text-align: center;
+      font-size: 18px;
+      line-height: 26px;
+    }
+    &_logo {
+      font-size: 36px;
+      padding: 0 20px;
+      letter-spacing: 5px;
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  .ticker{
+    height: 60px;
+    &_text {
+      font-size: 14px;
+    }
+    &_logo {
+      font-size: 32px;
+      text-align: center;
+      padding: 0 15px;
+      letter-spacing: 0;
+    }
+  }
+}
+
+@media (max-width: 630px) {
+  .ticker{
+    &_text {
+      display: none;
+    }
+  }
+}

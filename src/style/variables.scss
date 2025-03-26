@@ -1,0 +1,24 @@
+$title_font: "Neue Haas Grotesk Display Pro", sans-serif;
+$h1_font: "Arial", sans-serif;
+$title__color_light: #d7cdb9;
+$title__color_dark: #3a3328;
+$main_color: #c4b051;
+
+@mixin font_dark {
+  color: $title__color_dark;
+  text-shadow: 0 1px hsl(0deg 0% 100% / 50%);
+  font-weight: 600;
+  font-family: $title_font;
+  font-size: 14px;
+}
+
+@mixin font_light {
+  color: $main_color !important;
+  text-shadow: 0 -1px rgb(0 0 0 / 50%) !important;
+}
+
+@mixin slogan_h1 {
+  font-family: $h1_font;
+  color: $title__color_dark;
+  text-shadow: 0 -1px rgb(0 0 0 / 50%);
+}

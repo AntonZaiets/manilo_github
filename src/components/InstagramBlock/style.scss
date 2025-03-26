@@ -1,0 +1,46 @@
+.inst_block__photo{
+  flex-direction: row;
+  display: flex;
+  padding: 5px 0;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  img{
+    width: 25%; /* 4 images = 100%/4 = 25% width */
+    box-sizing: border-box;
+    padding: 10px;
+  }
+}
+.inst_block__collage{
+  margin: 0 0;
+}
+
+.inst_title{
+  text-align: center;
+  margin-top: 150px;
+  font-weight: 900;
+  font-size: 42px;
+  line-height: 42px;
+  a{
+    color: #3a3328;
+  }
+}
+@media(max-width: 768px){
+  .inst_title{
+    font-size: 32px;
+    margin-top: 100px;
+  }
+}
+@media(max-width: 480px){
+  .inst_block__photo{
+    img{
+      padding: 4px;
+      width: 50%;
+    }
+  }
+  .inst_title{
+    font-size: 28px;
+    margin-top: 50px;
+  }
+}
+
+

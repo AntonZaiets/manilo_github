@@ -1,0 +1,39 @@
+$global_line: #e9e9e9;
+$global_brown: #3a3328;
+
+.admin {
+  display: flex;
+  margin-top: 50px;
+  flex-direction: column;
+  &_page{
+    display: flex;
+    margin: 20px 0 50px;
+  }
+  &_content{
+    width: 100%;
+  }
+}
+
+.admin_sidebar {
+  width: 300px;
+  border-right: 1px solid $global_brown;
+  display: flex;
+  flex-direction: column;
+  &__block{
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    svg{
+      width: 40px;
+    }
+  }
+  &__link{
+    font-size: 20px;
+    margin-left: 20px;
+    color: $global_brown;
+  }
+}
+
+.cabinet-content{
+  margin-left: 50px;
+}

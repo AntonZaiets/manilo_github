@@ -1,0 +1,90 @@
+$global_brown: #3a3328;
+
+.order {
+  &_block{
+    margin-bottom: 20px;
+  }
+  &_item{
+    border: 1px solid $global_brown;
+    width: 100%;
+    padding: 16px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+  }
+  &_head {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    &__price{
+      text-align: center;
+      width: 20%;
+    }
+    &__img{
+      width: 40%;
+      display: flex;
+      justify-content: right;
+      margin-right: 50px;
+      img{
+        max-height: 50px;
+      }
+    }
+    &__data{
+      width: 35%;
+    }
+    &__time{
+      font-size: 20px;
+    }
+    &__arrow{
+      cursor: pointer;
+      span{
+        font-size: 15px;
+        color: $global_brown;
+      }
+    }
+  }
+}
+
+.order_content{
+  margin-top: 16px;
+  padding: 16px;
+  border-top: 1px solid #3a3328;
+  &__item{
+    margin-top: 10px;
+  }
+  &__title{
+    font-size: 20px;
+    font-weight: 600;
+  }
+  &__info{
+    margin-bottom: 4px;
+    width: 25%;
+    &_title{
+      font-weight: 600;
+    }
+  }
+
+  &__clothe{
+    border-bottom: 1px solid #3a3328;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    &:last-child{
+      border: 0;
+    }
+    &_img{
+      width: 40px;
+      margin-right: 20px;
+    }
+  }
+}
+
+.info_row{
+  p{
+    font-size: 14px;
+    color: #3e3e3e;
+  }
+  h3{
+    font-size: 16px;
+    color: #221f1f;
+  }
+}

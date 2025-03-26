@@ -1,0 +1,246 @@
+$title__color_dark: #3a3328;
+
+.slider_home {
+  height: calc(var(--vh, 1vh)*100);
+  min-height: 700px;
+  overflow: hidden;
+  position: relative;
+
+  .slide-list {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+
+    .slide {
+      flex: 1 0 100%;
+      position: relative;
+
+      .slide-image {
+        min-height: 100%;
+        width: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.slider_home:before {
+  top: 0;
+  left: 0;
+  transform: translate(-30%,-40%);
+  height: 100vh;
+  width: 100vh;
+}
+.slider_home:after {
+  bottom: 0;
+  right: 0;
+  height: 80vh;
+  width: 80vh;
+  transform: translateX(35%);
+}
+.slider_home:after, .slider_home:before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
+  border: 1px solid #3a3328;
+  opacity: .2;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+}
+
+/* ARROWS */
+.slider_control{
+  position: relative;
+  top: 50%;
+  z-index: 10;
+  &__l{
+    left: 2%;
+  }
+  &__r{
+    left: calc(98% - 1.6vw)
+  }
+}
+.arrowed {
+  position: absolute;
+  padding: 0.6rem;
+  box-shadow: 1px -1px 0 1px $title__color_dark inset;
+  -webkit-box-shadow: 2px -2px $title__color_dark inset;
+  border: solid transparent;
+  transition: 0.2s;
+}
+.dots_number__block{
+  text-align: center;
+}
+
+.arrowed:hover {
+  box-shadow: 2px -2px 0 2px $title__color_dark inset;
+  -webkit-box-shadow: 4px -4px $title__color_dark inset;
+  cursor: pointer;
+}
+.arrow-right {
+  transform:rotate(225deg);
+}
+.arrow-left  { transform:rotate(45deg) }
+
+img[lazy="loaded"] {
+  opacity: 0;
+  animation-name: fadein;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+  animation-timing-function: ease-out;
+}
+
+/* DOTS */
+.slider_dots__block{
+  position: absolute;
+  bottom: 20px;
+  right: calc(50% - 30px);
+}
+.dots_number__block {
+  right: 150px;
+  z-index: 10;
+}
+.dots {
+  display: flex;
+  z-index: 2;
+  align-items: center;
+  &_block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+  }
+  .dot {
+    background-color: #3a3328;
+    //margin: 10px;
+    box-shadow: 0 1px hsla(0, 0%, 100%, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    width: 5px;
+    height: 5px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &.selected {
+      background-color: #3a3328;
+      width: 10px;
+      height: 10px;
+    }
+  }
+}
+
+.dots_number {
+  span {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    vertical-align: top;
+    &:last-child {
+      font-size: 24px;
+      line-height: 26px;
+      vertical-align: top;
+    }
+  }
+}
+.slider_content__block{
+  height: 350px;
+}
+
+.slider_title{
+  font-family: 'Philosopher', cursive;
+  letter-spacing: 0.9em;
+  cursor: default;
+}
+.slider_container{
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 0 6vw;
+  padding-top: 200px;
+  height: calc(var(--vh, 1vh)*100);
+  min-height: 700px;
+}
+
+.slider_phrases{
+  font-family: 'Philosopher', cursive;
+  letter-spacing: 0.2em;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 26px;
+  cursor: default;
+  &:first-child{
+    margin-top: 100px;
+  }
+}
+
+.slider_h2{
+  font-size: 50px;
+  line-height: 50px;
+  text-transform: uppercase;
+  color: #3a3328;
+  text-shadow: 0 1px hsla(0, 0%, 100%, 0.5);
+  letter-spacing: 0.5em;
+}
+
+.slider_product_link{
+  width: 50%;
+  .left_m{
+    margin-left: 100px;
+  }
+  .slider_price{
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider_product_link {
+    width: 100%;
+  }
+  .slider_control{
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .slider_product_link {
+    .left_m{
+      margin-left: 0;
+    }
+  }
+  .slider_h2{
+    font-size: 8vw;
+    line-height: 8vw;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider_container {
+    padding-top: 120px;
+    min-height: auto;
+  }
+  .slider_content__block{
+    height: 310px;
+  }
+  .slider_phrases{
+    font-size: 20px;
+    &:first-child{
+      margin-top: 70px;
+    }
+  }
+}

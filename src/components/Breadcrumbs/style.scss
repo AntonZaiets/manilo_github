@@ -1,0 +1,35 @@
+$main_color: #c4b051;
+
+.breadcrumbs{
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  &_item{
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: 600;
+    svg{
+
+    }
+    .disabled_link{
+      pointer-events: none;
+      opacity: .5;
+    }
+  }
+}
+
+.light-layout a {
+  color: #3a3328;
+  text-shadow: 0 1px hsla(0,0%,100%,.5);
+}
+
+.dark-layout a {
+  color: $main_color;
+  //text-shadow: 0 1px hsla(0,0%,100%,.5);
+}
+.white_breadcrumb{
+  color: $main_color;
+}
